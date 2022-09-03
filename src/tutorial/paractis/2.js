@@ -10,13 +10,22 @@ const ipt = document.querySelector(".ipt");
 const btnPut = document.querySelector(".btn-put");
 const btnClean = document.querySelector(".btn-clean");
 const listDiv = document.querySelector(".list");
+// save input into variable
 let putArr = [];
+// quiest if are a local storage saved
+const localStrg = JSON.parse(localStorage.getItem("listExample"));
+
+// if local storage then print in dom
+if (localStrg) {
+  putArr = localStrg;
+  printDom(putArr);
+}
 
 // listen to the click event
-
 btnPut.addEventListener("click", function () {
   putArr.push(ipt.value);
   ipt.value = "";
+  localStorage.setItem("listExample", JSON.stringify(putArr));
   printDom(putArr);
 });
 
