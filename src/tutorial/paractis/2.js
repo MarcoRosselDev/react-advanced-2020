@@ -36,3 +36,11 @@ function printDom(arr) {
   }
   listDiv.innerHTML = printHtml;
 }
+
+// clean button to local storage
+
+btnClean.addEventListener("dblclick", function () {
+  localStorage.clear;
+  putArr = [];
+  printDom(putArr);
+});
