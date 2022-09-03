@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const UseStateBasics = () => {
-  console.log(useState);
-  return <h2>useState basic example</h2>;
+  const [text, setText] = useState("random text for the example");
+  return <h2>{text}</h2>;
 };
 
 export default UseStateBasics;
