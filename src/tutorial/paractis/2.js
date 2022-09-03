@@ -40,7 +40,7 @@ function printDom(arr) {
 // clean button to local storage
 
 btnClean.addEventListener("dblclick", function () {
-  localStorage.clear;
+  localStorage.clear();
   putArr = [];
   printDom(putArr);
 });
