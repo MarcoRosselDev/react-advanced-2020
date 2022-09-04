@@ -14,6 +14,9 @@ const UseStateArray = () => {
           </div>
         );
       })}
+      <button className="btn" onClick={() => setPeople([])}>
+        clean
+      </button>
     </>
   );
 };
