@@ -5,6 +5,9 @@ import React, { useState, useEffect } from "react";
 const UseEffectBasics = () => {
   useEffect(() => {
     console.log("call useEffect");
+    if (value >= 1) {
+      document.title = `New message(${value})`;
+    }
   });
   console.log("render component");
   const [value, setValue] = useState(0);
