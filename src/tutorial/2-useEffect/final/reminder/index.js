@@ -15,4 +15,14 @@ let objt = [];
 btnPrint.addEventListener("click", function () {
   objt.push(inpt.value);
   inpt.value = "";
+  localStorage.setItem("example", JSON.stringify(objt));
+  printTheDom(objt);
 });
+
+function printTheDom(arr) {
+  let printFinal = "";
+  for (let i = 0; i < arr.length; i++) {
+    printFinal += `<li> ${arr[i]} </li>`;
+  }
+  list.innerHTML = printFinal;
+}
