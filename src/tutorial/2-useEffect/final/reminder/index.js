@@ -32,3 +32,9 @@ function printTheDom(arr) {
   }
   list.innerHTML = printFinal;
 }
+
+btnClean.addEventListener("dblclick", function () {
+  localStorage.clear();
+  objt = [];
+  printTheDom(objt);
+});
