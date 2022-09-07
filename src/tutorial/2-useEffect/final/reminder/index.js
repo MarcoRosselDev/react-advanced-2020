@@ -10,7 +10,13 @@ const inpt = document.querySelector(".inpt");
 const btnPrint = document.querySelector(".btn-print");
 const btnClean = document.querySelector(".btn-clean");
 const list = document.querySelector(".list");
+const isLocal = JSON.parse(localStorage.getItem("example"));
 let objt = [];
+
+if (isLocal) {
+  objt = isLocal;
+  printTheDom(objt);
+}
 
 btnPrint.addEventListener("click", function () {
   objt.push(inpt.value);
