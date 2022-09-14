@@ -15,6 +15,11 @@ const list = document.querySelector(".list");
 let localStrg = JSON.parse(localStorage.getItem("list1"));
 let object = [];
 
+if (localStrg) {
+  object = localStrg;
+  printDOM(object);
+}
+
 btnPut.addEventListener("click", function () {
   object.push(input.value);
   input.value = "";
@@ -29,3 +34,7 @@ function printDOM(item) {
   }
   list.innerHTML = lastDOM;
 }
+
+btnClean.addEventListener("dblclick", function () {
+  localStorage.clear();
+});
