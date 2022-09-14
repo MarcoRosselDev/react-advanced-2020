@@ -37,4 +37,6 @@ function printDOM(item) {
 
 btnClean.addEventListener("dblclick", function () {
   localStorage.clear();
+  object = [];
+  printDOM(object);
 });
