@@ -12,13 +12,18 @@ const input = document.querySelector(".input");
 const btnPut = document.querySelector(".btn-put");
 const btnClean = document.querySelector(".btn-clean");
 const list = document.querySelector(".list");
+let object = [];
 
 btnPut.addEventListener("click", function () {
-  printDOM();
+  object.push(input.value);
+  input.value = "";
+  printDOM(object);
 });
 
 function printDOM(item) {
+  let lastDOM = "";
   for (let i = 0; i < item.length; i++) {
-    list.innerHTML = item[i];
+    lastDOM += `<li>${item[i]} </li>`;
   }
+  list.innerHTML = lastDOM;
 }
