@@ -12,11 +12,13 @@ const input = document.querySelector(".input");
 const btnPut = document.querySelector(".btn-put");
 const btnClean = document.querySelector(".btn-clean");
 const list = document.querySelector(".list");
+let localStrg = JSON.parse(localStorage.getItem("list1"));
 let object = [];
 
 btnPut.addEventListener("click", function () {
   object.push(input.value);
   input.value = "";
+  localStorage.setItem("list1", JSON.stringify(object));
   printDOM(object);
 });
 
