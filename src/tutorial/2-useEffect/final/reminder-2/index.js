@@ -11,3 +11,14 @@
 const input = document.querySelector(".input");
 const btnPut = document.querySelector(".btn-put");
 const btnClean = document.querySelector(".btn-clean");
+const list = document.querySelector(".list");
+
+btnPut.addEventListener("click", function () {
+  printDOM();
+});
+
+function printDOM(item) {
+  for (let i = 0; i < item.length; i++) {
+    list.innerHTML = item[i];
+  }
+}
