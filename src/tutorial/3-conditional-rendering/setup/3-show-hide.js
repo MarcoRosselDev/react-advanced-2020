@@ -7,7 +7,25 @@ const ShowHide = () => {
       <button className="btn" onClick={() => setShow(!show)}>
         show/hidden
       </button>
+      {show && <Item />}
     </>
+  );
+};
+
+const Item = () => {
+  const [size, setSize] = useState(window.innerWidth);
+  const checkSize = () => {
+    setSize(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", chekSize);
+  }, []);
+
+  return (
+    <div style={{ marginTop: "2rem" }}>
+      <h1>window</h1>
+      <h2>size :</h2>
+    </div>
   );
 };
 
