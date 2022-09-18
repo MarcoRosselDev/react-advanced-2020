@@ -6,10 +6,14 @@ import React, { useState } from "react";
 // value, onChange
 
 const ControlledInputs = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // no refresca la paguina al precionar enviar
+    console.log("hola mundo");
+  };
   return (
     <>
       <article>
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <div className="form-control">
             <label htmlFor="firstName">Name :</label>
             <input type="text" id="firstName" name="firstName" />
