@@ -20,6 +20,10 @@ const MultipleReturns = () => {
         <h2>Error...</h2>
       </div>
     );
+  return (
+      <div>
+        <h2> ${user}</h2>
+      </div>
   }
   return <h2>multiple returns</h2>;
 };
