@@ -18,13 +18,16 @@ const Item = () => {
     setSize(window.innerWidth);
   };
   useEffect(() => {
-    window.addEventListener("resize", chekSize);
+    window.addEventListener("resize", checkSize);
+    return () => {
+      window.removeEventListener("resize", checkSize);
+    };
   }, []);
 
   return (
     <div style={{ marginTop: "2rem" }}>
       <h1>window</h1>
-      <h2>size :</h2>
+      <h2>size : {size}</h2>
     </div>
   );
 };
