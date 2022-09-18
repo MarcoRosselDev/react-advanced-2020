@@ -13,6 +13,15 @@ const ShortCircuit = () => {
         toggle error
       </button>
       {isError && <h1>Error...</h1>}
+      {isError ? (
+        <h1>puede ser una estructura más compleja</h1>
+      ) : (
+        <div>
+          <h1>el cielo es el limite</h1>
+          <h1>el cielo es el limite</h1>
+          <button className="btn">el cielo es el limite</button>
+        </div>
+      )}
     </>
   );
 };
